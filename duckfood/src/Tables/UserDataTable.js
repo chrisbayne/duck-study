@@ -16,7 +16,7 @@ const UserDataTable =  (props) => {
                 </tr>
             </thead>
             <tbody>
-                {/* Basic table to loop over the user data submissions */}
+                {/* Basic table to loop over the user data submissions received by App.js through props */}
                 {/* Using ternary operator to return data immediately */}
                 { props.users.length > 0 ? (
                     props.users.map(user => {
