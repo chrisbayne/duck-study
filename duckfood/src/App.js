@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import userDataList from './data'
 import UserDataTable from './Tables/UserDataTable'
+import AddDataForm from './Forms/AddDataForm'
+import EditDataForm from './Forms/EditDataForm'
 
 const App = () => {
 
@@ -16,7 +18,11 @@ const App = () => {
     setUsers([...users, user])
   }
 
-  // <AddDataForm addData={ addData } />
+  // Filters over the user data array to filter out the user that has
+  // the id of the data set to be deleted.
+  const deleteData = id => setUsers( users.filter( user => user.id !== id))
+
+  <UserDataTable users={ users } deleteData={ deleteData } />
 
   return (
     <div className="container">
@@ -24,6 +30,7 @@ const App = () => {
       <div className="row">
         <div className="five columns">
           <h2>Submit Data</h2>
+          <AddDataForm addData={ addData } />
         </div>
         <div className="seven columns">
           <h2>View Data</h2>

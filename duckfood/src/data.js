@@ -25,7 +25,7 @@ const userDataList = [
         location: 'Victoria, BC',
         numberOfDucks: '25',
         foodAmount: '2.5 lbs'
-    },
+    }
 ]
 
 export default userDataList
