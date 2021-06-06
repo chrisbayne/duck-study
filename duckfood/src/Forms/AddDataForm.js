@@ -14,7 +14,8 @@ const AddDataForm = ( props ) => {
     }
 
     // Preventing the default page refresh and checking to see if the users name
-    // and location have been filled in. 
+    // and location have been filled in.
+    // Passing the addData function as a callback after the handleChange is finished. 
     const handleSubmit = e => {
         e.preventDefault()
         if ( user.name && user.location ) {
