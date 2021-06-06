@@ -8,6 +8,14 @@ const App = () => {
 
   const [ users, setUsers ] = useState( userDataList )
 
+  // Checking to see if the user is currently editing and choose which user is 
+  // currently being edited.
+  const [ editing, setEditing ] = useState( false )
+
+  const initialData = { id: null, name: '', time: '', foodType: '', location: '', numberOfDucks: '', foodAmount: '' }
+
+  const [ currentData, setCurrentData ] = useState( initialData )
+
   // By using setUsers, the addData function puts an object containing a 
   // new user into the users array which is being passed to the AddUser component.
   //
@@ -22,8 +30,6 @@ const App = () => {
   // the id of the data set to be deleted.
   const deleteData = id => setUsers( users.filter( user => user.id !== id))
 
-  <UserDataTable users={ users } deleteData={ deleteData } />
-
   return (
     <div className="container">
       <h1>A Review of Duck Nutrition</h1>
@@ -34,7 +40,7 @@ const App = () => {
         </div>
         <div className="seven columns">
           <h2>View Data</h2>
-          <UserDataTable users={ users } />
+          <UserDataTable users={ users } deleteData={ deleteData } />
         </div>
       </div>
     </div>

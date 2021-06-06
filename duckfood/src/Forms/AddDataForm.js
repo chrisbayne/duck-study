@@ -38,7 +38,7 @@ const AddDataForm = ( props ) => {
             <input className="u-full-width" type="text" name="number of ducks" value={ user.numberOfDucks } onChange={ handleChange } />
             <label>Food Amount</label>
             <input className="u-full-width" type="text" time="food amount" value={ user.foodAmount } onChange={ handleChange } />
-            <button className="button-warning" type="submit" onClick= { handleSubmit }>Add Data</button>
+            <button className="button-warning" type="submit" onClick={ handleSubmit }>Add Data</button>
         </form>
     )
 }
