@@ -15,6 +15,8 @@ const App = () => {
     setUsers([...users, user])
   }
 
+  <AddDataForm addData={addData} />
+
   return (
     <div className="container">
       <h1>A Review of Duck Nutrition</h1>
