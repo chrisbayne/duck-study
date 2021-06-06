@@ -12,7 +12,7 @@ const userDataList = [
         id: 2,
         name: 'Lisa',
         time: '16:00',
-        foodType: 'Whea/Barley mix',
+        foodType: 'Wheat/Barley mix',
         location: 'Kyoto, JP',
         numberOfDucks: '45',
         foodAmount: '3 lbs'

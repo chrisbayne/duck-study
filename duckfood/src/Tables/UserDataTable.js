@@ -7,7 +7,7 @@ const UserDataTable =  ( props ) => {
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Time</th>
+                    <th>Time Fed</th>
                     <th>Type of Food</th>
                     <th>Location</th>
                     <th>Number of Ducks</th>
@@ -31,7 +31,7 @@ const UserDataTable =  ( props ) => {
                                 <td>{ numberOfDucks }</td>
                                 <td>{ foodAmount }</td>
                                 <td>
-                                    <button>Delete</button>
+                                    <button onClick={() => props.deleteData( id )}>Delete</button>
                                     <button>Edit</button>
                                 </td>
                             </tr>

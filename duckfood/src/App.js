@@ -16,7 +16,7 @@ const App = () => {
     setUsers([...users, user])
   }
 
-  <AddDataForm addData={ addData } />
+  // <AddDataForm addData={ addData } />
 
   return (
     <div className="container">
