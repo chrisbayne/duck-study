@@ -1,6 +1,6 @@
 import React from 'react'
 
-const UserDataTable =  (props) => {
+const UserDataTable =  ( props ) => {
     return (
         <table>
             <thead>
@@ -20,16 +20,16 @@ const UserDataTable =  (props) => {
                 {/* Using ternary operator to return data immediately */}
                 { props.users.length > 0 ? (
                     props.users.map(user => {
-                        const {id, name, time, foodType, location, numberOfDucks, foodAmount} = user
+                        const { id, name, time, foodType, location, numberOfDucks, foodAmount } = user
                         return (
                             <tr>
-                                <td>{id}</td>
-                                <td>{name}</td>
-                                <td>{time}</td>
-                                <td>{foodType}</td>
-                                <td>{location}</td>
-                                <td>{numberOfDucks}</td>
-                                <td>{foodAmount}</td>
+                                <td>{ id }</td>
+                                <td>{ name }</td>
+                                <td>{ time }</td>
+                                <td>{ foodType }</td>
+                                <td>{ location }</td>
+                                <td>{ numberOfDucks }</td>
+                                <td>{ foodAmount }</td>
                                 <td>
                                     <button>Delete</button>
                                     <button>Edit</button>
@@ -40,7 +40,7 @@ const UserDataTable =  (props) => {
                     // Error handling: If there are no users found, display a message
                 ) : (
                     <tr>
-                        <td colSpan={4}>No users found</td>
+                        <td colSpan={ 4 }>No users found</td>
                     </tr>
                 )
             }

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import userDataList from './data'
 import UserDataTable from './Tables/UserDataTable'
 
 const App = () => {
 
-  const [users, setUsers] = useState(userDataList)
+  const [ users, setUsers ] = useState( userDataList )
 
   // By using setUsers, the addData function puts an object containing a 
   // new user into the users array which is being passed to the AddUser component.
@@ -15,7 +15,7 @@ const App = () => {
     setUsers([...users, user])
   }
 
-  <AddDataForm addData={addData} />
+  <AddDataForm addData={ addData } />
 
   return (
     <div className="container">
@@ -26,7 +26,7 @@ const App = () => {
         </div>
         <div className="seven columns">
           <h2>View Data</h2>
-          <UserDataTable users={users} />
+          <UserDataTable users={ users } />
         </div>
       </div>
     </div>
