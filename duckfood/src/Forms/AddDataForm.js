@@ -6,6 +6,21 @@ const AddDataForm = ( props ) => {
 
     const [ user, setUser ] = useState(initData)
 
+    // Destructing off of the properties of the event.target object.
+    const handleChange = e => {
+        const { name, value } = e.target
+        setUser({ ...user, [ name ]: value })
+    }
+
+    // Preventing the default page refresh and checking to see if the users name
+    // and location have been filled in. 
+    const handleSubmit = e => {
+        e.preventDefault()
+        if ( user.name && user.location ) {
+            handleChange( e, props.addData(data) )
+        }
+    }
+
     return (
         <form>
             <label>Name</label>
@@ -20,7 +35,7 @@ const AddDataForm = ( props ) => {
             <input className="u-full-width" type="text" name="number of ducks" value={ user.numberOfDucks } />
             <label>Food Amount</label>
             <input className="u-full-width" type="text" time="food amount" value={ user.foodAmount } />
-            <button className="button-warning" type="submit">Add Data</button>
+            <button className="button-warning" type="submit" onClick= { handleSubmit }>Add Data</button>
         </form>
     )
 }

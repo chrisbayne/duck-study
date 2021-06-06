@@ -37,7 +37,7 @@ const UserDataTable =  ( props ) => {
                             </tr>
                         )
                     })
-                    // Error handling: If there are no users found, display a message
+                    // Error handling: If there are no users found, display a message.
                 ) : (
                     <tr>
                         <td colSpan={ 4 }>No users found</td>
