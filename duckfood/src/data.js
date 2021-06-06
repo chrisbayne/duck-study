@@ -6,7 +6,7 @@ const userDataList = [
         foodType: 'Poultry Starter Pellets',
         location: 'Berlin, GER',
         numberOfDucks: '30',
-        amount: '2 lbs'
+        foodAmount: '2 lbs'
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const userDataList = [
         foodType: 'Whea/Barley mix',
         location: 'Kyoto, JP',
         numberOfDucks: '45',
-        amount: '3 lbs'
+        foodAmount: '3 lbs'
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const userDataList = [
         foodType: 'Brown rice',
         location: 'Victoria, BC',
         numberOfDucks: '25',
-        amount: '2.5 lbs'
+        foodAmount: '2.5 lbs'
     },
 ]
 
