@@ -8,7 +8,7 @@ const App = () => {
 
   const [ users, setUsers ] = useState( userDataList )
 
-  // Checking to see if the user is currently editing and choose which user is 
+  // Checking to see if the user is currently editing a data set and decide which data set is 
   // currently being edited.
   const [ editing, setEditing ] = useState( false )
 
@@ -30,17 +30,43 @@ const App = () => {
   // the id of the data set to be deleted.
   const deleteData = id => setUsers( users.filter( user => user.id !== id))
 
+  const editData = ( id, user ) => {
+      setEditing( true )
+      setCurrentData( user )
+  }
+
+  const updateData = ( newData ) => {
+      setUsers( users.map(user => ( user.id === currentData.id ? newData : user )))
+  }
+
   return (
     <div className="container">
-      <h1>A Review of Duck Nutrition</h1>
+      <h1>A Review of Global Duck Nutrition</h1>
       <div className="row">
         <div className="five columns">
-          <h2>Submit Data</h2>
-          <AddDataForm addData={ addData } />
+            {/* Shows the EditData or AddData form based on the editing state */}
+          { editing ? (
+            <div>
+              <h2>Edit Data</h2>
+              <EditDataForm 
+                currentData={ currentData }
+                setEditing={ setEditing }
+                updateData={ updateData } />
+            </div>
+          ) : (
+            <div>
+              <h2>Submit Data</h2>
+              <AddDataForm 
+              addData={ addData } />
+          </div>
+        )}
         </div>
         <div className="seven columns">
           <h2>View Data</h2>
-          <UserDataTable users={ users } deleteData={ deleteData } />
+          <UserDataTable 
+            users={ users } 
+            deleteData={ deleteData }
+            editData={ editData } />
         </div>
       </div>
     </div>
