@@ -22,7 +22,7 @@ const userDataList = [
         name: 'Kristin',
         time: '13:30',
         foodType: 'Brown rice',
-        location: 'Victoria, BC',
+        location: 'Victoria, CAN',
         numberOfDucks: '25',
         foodAmount: '2.5 lbs'
     }

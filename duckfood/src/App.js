@@ -8,14 +8,6 @@ const App = () => {
 
   const [ users, setUsers ] = useState( userDataList )
 
-  // Checking to see if the user is currently editing a data set and decide which data set is 
-  // currently being edited.
-  const [ editing, setEditing ] = useState( false )
-
-  const initialData = { id: null, name: '', time: '', foodType: '', location: '', numberOfDucks: '', foodAmount: '' }
-
-  const [ currentData, setCurrentData ] = useState( initialData )
-
   // By using setUsers, the addData function puts an object containing a 
   // new user into the users array which is being passed to the AddUser component.
   //
@@ -28,7 +20,15 @@ const App = () => {
 
   // Filters over the user data array to filter out the user that has
   // the id of the data set to be deleted.
-  const deleteData = id => setUsers( users.filter( user => user.id !== id))
+  const deleteData = id => setUsers( users.filter( (user) => user.id !== id) )
+
+  // Checking to see if the user is currently editing a data set and decide which data set is 
+  // currently being edited.
+  const [ editing, setEditing ] = useState( false )
+
+  const initialData = { id: null, name: '', time: '', foodType: '', location: '', numberOfDucks: '', foodAmount: '' }
+
+  const [ currentData, setCurrentData ] = useState( initialData )
 
   const editData = ( id, user ) => {
       setEditing( true )
@@ -36,7 +36,7 @@ const App = () => {
   }
 
   const updateData = ( newData ) => {
-      setUsers( users.map(user => ( user.id === currentData.id ? newData : user )))
+      setUsers( users.map( (user) => ( user.id === currentData.id ? newData : user )))
   }
 
   return (

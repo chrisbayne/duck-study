@@ -22,7 +22,7 @@ const UserDataTable =  ( props ) => {
                     props.users.map(user => {
                         const { id, name, time, foodType, location, numberOfDucks, foodAmount } = user
                         return (
-                            <tr>
+                            <tr key={ id }>
                                 <td>{ id }</td>
                                 <td>{ name }</td>
                                 <td>{ time }</td>
@@ -32,7 +32,7 @@ const UserDataTable =  ( props ) => {
                                 <td>{ foodAmount }</td>
                                 <td>
                                     <button onClick={() => props.deleteData( id )}>Delete</button>
-                                    <button>Edit</button>
+                                    <button onClick={() => props.editData( id, user )}>Edit</button>
                                 </td>
                             </tr>
                         )
