@@ -42,35 +42,39 @@ const App = () => {
   }
 
   return (
-    <div className="container">
-      <h1 className="top-title">A Review of Global Duck Nutrition</h1>
-      <div className="row">
-        <div className="five columns">
-            {/* Shows the EditData or AddData form based on the editing state */}
-          { editing ? (
-            <div>
-              <h2>Edit Data</h2>
-              <EditDataForm 
-                currentData={ currentData }
-                setEditing={ setEditing }
-                updateData={ updateData } />
+    <div className="background-color">
+        <div className="logo"></div>
+        <div className="background-banner"></div>
+            <div className="container">
+                <div className="row">
+                <div className="five columns">
+                    {/* Shows the EditData or AddData form based on the editing state */}
+                    { editing ? (
+                    <div>
+                        <h2 className="submit-edit-data-title">Edit Data</h2>
+                        <EditDataForm 
+                        currentData={ currentData }
+                        setEditing={ setEditing }
+                        updateData={ updateData } />
+                    </div>
+                    ) : (
+                    <div>
+                        <h2 className="submit-edit-data-title">Submit Data</h2>
+                        <AddDataForm 
+                        addData={ addData } />
+                    </div>
+                )}
+                </div>
+                <div className="seven columns">
+                    <h2 className="view-data-title">View Data</h2>
+                    <UserDataTable 
+                    users={ users } 
+                    deleteData={ deleteData }
+                    editData={ editData } />
+                </div>
+                </div>
             </div>
-          ) : (
-            <div>
-              <h2 className="submit-data-title">Submit Data</h2>
-              <AddDataForm 
-              addData={ addData } />
-          </div>
-        )}
-        </div>
-        <div className="seven columns">
-          <h2 className="view-data-title">View Data</h2>
-          <UserDataTable 
-            users={ users } 
-            deleteData={ deleteData }
-            editData={ editData } />
-        </div>
-      </div>
+        
     </div>
   )
 }

@@ -225,22 +225,47 @@ input[type="button"].button-primary:focus {
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.top-title {
-    text-align: center;
+.background-color {
+  background-color: #F2F1E7;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.submit-data-title {
+/* .logo {
+  background-image: url(../Images/logo.png);
+  position: absolute;
+  top: 8px;
+  left: 16px;
+} */
+
+.background-banner {
+  background-image: url(../Images/duck2.jpg);
+  height: 20vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  top: 10vh;
+}
+
+.submit-edit-data-title {
     text-align: center;
+    color: #636D8E;
+    padding-top: 15vh;
 }
 
 .view-data-title {
     text-align: center;
+    color: #636D8E;
+    padding-top: 15vh;
 }
 
 .main-container {
   background-color: #e9756d;
   height: min-content;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px;
   box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
 }
@@ -249,7 +274,7 @@ input[type="button"].button-primary:focus {
     background-color: #e9756d;
     width: min-content;
     height: min-content;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 20px;
     box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
   }
