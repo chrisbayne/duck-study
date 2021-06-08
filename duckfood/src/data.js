@@ -5,7 +5,7 @@ const userDataList = [
         time: '07:00',
         foodtype: 'Poultry Starter Pellets',
         location: 'Berlin, GER',
-        numberofducks: '30',
+        numberofducks: '16',
         foodamount: '2 lbs'
     },
     {
@@ -14,7 +14,7 @@ const userDataList = [
         time: '16:00',
         foodtype: 'Wheat/Barley mix',
         location: 'Kyoto, JP',
-        numberofducks: '45',
+        numberofducks: '31',
         foodamount: '3 lbs'
     },
     {
@@ -23,7 +23,7 @@ const userDataList = [
         time: '13:30',
         foodtype: 'Brown rice',
         location: 'Victoria, CAN',
-        numberofducks: '25',
+        numberofducks: '22',
         foodamount: '2.5 lbs'
     }
 ]

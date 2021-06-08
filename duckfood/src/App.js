@@ -3,6 +3,7 @@ import userDataList from './data'
 import UserDataTable from './Tables/UserDataTable'
 import AddDataForm from './Forms/AddDataForm'
 import EditDataForm from './Forms/EditDataForm'
+import './Styles/styles.css'
 
 const App = () => {
 
@@ -42,7 +43,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>A Review of Global Duck Nutrition</h1>
+      <h1 className="top-title">A Review of Global Duck Nutrition</h1>
       <div className="row">
         <div className="five columns">
             {/* Shows the EditData or AddData form based on the editing state */}
@@ -56,14 +57,14 @@ const App = () => {
             </div>
           ) : (
             <div>
-              <h2>Submit Data</h2>
+              <h2 className="submit-data-title">Submit Data</h2>
               <AddDataForm 
               addData={ addData } />
           </div>
         )}
         </div>
         <div className="seven columns">
-          <h2>View Data</h2>
+          <h2 className="view-data-title">View Data</h2>
           <UserDataTable 
             users={ users } 
             deleteData={ deleteData }
