@@ -4,7 +4,7 @@ const EditDataForm = ( props ) => {
 
     const [ user, setUser ] = useState( props.currentData )
 
-    const handleChange = e => {
+    const handleInputChange = e => {
         const { name, value } = e.target
         setUser({...user, [ name ]: value})
     }
@@ -23,19 +23,67 @@ const EditDataForm = ( props ) => {
     return (
         <form>
             <label>Name</label>
-            <input className="u-full-width" type="text" name="name" defaultValue={ user.name } onChange={ handleChange } />
+            <input 
+                className="u-full-width" 
+                type="text" 
+                name="name" 
+                placeholder="First Name" 
+                defaultValue={ user.name } 
+                onChange={ handleInputChange } 
+            />
             <label>Time</label>
-            <input className="u-full-width" type="text" name="time" defaultValue={ user.time } onChange={ handleChange } />
+            <input 
+                className="u-full-width" 
+                type="text" 
+                name="time" 
+                placeholder="24h Time format (ie. 18:20)" 
+                defaultValue={ user.time } 
+                onChange={ handleInputChange } 
+            />
             <label>Type of Food</label>
-            <input className="u-full-width" type="text" name="food type" defaultValue={ user.foodType } onChange={ handleChange } />
+            <input 
+                className="u-full-width" 
+                type="text" 
+                name="foodtype" 
+                placeholder="Type of Food" 
+                defaultValue={ user.foodType } 
+                onChange={ handleInputChange } 
+            />
             <label>Location</label>
-            <input className="u-full-width" type="text" name="location" defaultValue={ user.location } onChange={ handleChange } />
+            <input 
+                className="u-full-width" 
+                type="text" 
+                name="location" 
+                placeholder="Location (City, Country)" 
+                defaultValue={ user.location } 
+                onChange={ handleInputChange } 
+            />
             <label>Number of Ducks</label>
-            <input className="u-full-width" type="text" name="number of ducks" defaultValue={ user.numberOfDucks } onChange={ handleChange } />
+            <input 
+                className="u-full-width" 
+                type="text" 
+                name="numberofducks" 
+                placeholder="Number of ducks" 
+                defaultValue={ user.numberOfDucks } 
+                onChange={ handleInputChange } 
+            />
             <label>Food Amount</label>
-            <input className="u-full-width" type="text" time="food amount" defaultValue={ user.foodAmount } onChange={ handleChange } />
-            <button className="button-warning" type="submit" onClick={ handleSubmit }>Edit Data Set</button>
-            <button type="submit" onClick={() => props.setEditing( false ) }>Cancel</button>
+            <input 
+                className="u-full-width" 
+                type="text" name="foodamount" 
+                placeholder="Food Amount (in Lbs)" 
+                defaultValue={ user.foodAmount } 
+                onChange={ handleInputChange } 
+            />
+            <button 
+                className="button-warning" 
+                type="submit" 
+                onClick={ handleSubmit }>Edit Data Set
+            </button>
+            <button 
+                type="submit" 
+                onClick={() => props.setEditing( false ) }>Cancel
+            </button>
         </form>
     )
 }

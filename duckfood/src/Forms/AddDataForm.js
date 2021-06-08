@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const AddDataForm = ( props ) => {
     
-    // Initial state of data values are set to empty strings.
+    // Creating an object literal with data values set to empty strings.
     const initialData = { 
         id: null, 
         name: '', 
@@ -17,8 +17,8 @@ const AddDataForm = ( props ) => {
 
     // Destructing off of the properties of the event.target object.
     // Dynamically setting object keys based on the input fields.
-    const handleChange = e => {
-        const { name, value } = e.target.name
+    const handleInputChange = e => {
+        const { name, value } = e.target
         setUser({ ...user, [ name ]: value })
     }
 
@@ -27,9 +27,18 @@ const AddDataForm = ( props ) => {
     // Passing the addData function as a callback after the handleChange is finished. 
     const handleSubmit = e => {
         e.preventDefault()
-        if ( user.name && user.time && user.foodType && user.location && user.numberOfDucks && user.foodAmount ) {
-            handleChange( e, props.addData( user ) )
+        if ( user.name && user.time && user.location ) {
+            handleInputChange( e, props.addData( user ) )
         }
+        // Pop up alert to present the user with the submitted data set
+        alert(`Data Submitted:\n
+        Name : ${user.name}
+        Time : ${user.time}
+        Type of Food : ${user.foodType}
+        Location : ${user.location}
+        Number of Ducks : ${user.numberOfDucks}
+        Amount of Food : ${user.foodAmount}
+        `)
     }
 
     return (
@@ -41,7 +50,7 @@ const AddDataForm = ( props ) => {
                 name="name" 
                 placeholder="First Name" 
                 defaultValue={ user.name } 
-                onChange={ handleChange } 
+                onChange={ handleInputChange } 
             />
             <label>Time</label>
             <input 
@@ -50,7 +59,7 @@ const AddDataForm = ( props ) => {
                 name="time" 
                 placeholder="24h Time format (ie. 18:20)" 
                 defaultValue={ user.time } 
-                onChange={ handleChange } 
+                onChange={ handleInputChange } 
             />
             <label>Type of Food</label>
             <input 
@@ -59,7 +68,7 @@ const AddDataForm = ( props ) => {
                 name="foodtype" 
                 placeholder="Type of Food" 
                 defaultValue={ user.foodType } 
-                onChange={ handleChange } 
+                onChange={ handleInputChange } 
             />
             <label>Location</label>
             <input 
@@ -68,7 +77,7 @@ const AddDataForm = ( props ) => {
                 name="location" 
                 placeholder="Location (City, Country)" 
                 defaultValue={ user.location } 
-                onChange={ handleChange } 
+                onChange={ handleInputChange } 
             />
             <label>Number of Ducks</label>
             <input 
@@ -77,7 +86,7 @@ const AddDataForm = ( props ) => {
                 name="numberofducks" 
                 placeholder="Number of ducks" 
                 defaultValue={ user.numberOfDucks } 
-                onChange={ handleChange } 
+                onChange={ handleInputChange } 
             />
             <label>Food Amount</label>
             <input 
@@ -85,7 +94,7 @@ const AddDataForm = ( props ) => {
                 type="text" name="foodamount" 
                 placeholder="Food Amount (in Lbs)" 
                 defaultValue={ user.foodAmount } 
-                onChange={ handleChange } 
+                onChange={ handleInputChange } 
             />
             <button 
                 className="button-warning" 

@@ -13,14 +13,14 @@ const App = () => {
   //
   // A new ID is set based on the current number (+ 1) of user data sets each time a data set is submitted 
   // The spread operator keeps the current user array the same.
-  const addData = ( user ) => {
+  const addData =  user  => {
     user.id = users.length + 1
     setUsers([...users, user])
   }
 
   // Filters over the user data array to filter out the user that has
   // the id of the data set to be deleted.
-  const deleteData = ( id ) => setUsers( users.filter( (user) => user.id !== id) )
+  const deleteData = ( id ) => setUsers( users.filter( user => user.id !== id) )
 
   // Checking to see if the user is currently editing a data set and decide which data set is 
   // currently being edited.
