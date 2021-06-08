@@ -22,7 +22,7 @@ const UserDataTable =  ( props ) => {
                     props.users.map(user => {
                         const { id, name, time, foodType, location, numberOfDucks, foodAmount } = user
                         return (
-                            <tr key={ id }>
+                            <tr>
                                 <td>{ id }</td>
                                 <td>{ name }</td>
                                 <td>{ time }</td>
@@ -31,6 +31,8 @@ const UserDataTable =  ( props ) => {
                                 <td>{ numberOfDucks }</td>
                                 <td>{ foodAmount }</td>
                                 <td>
+                                    {/* Filtering over the submitted data sets array to filter out the data set that has
+                                    the ID of the data set to be deleted */}
                                     <button onClick={() => props.deleteData( id )}>Delete</button>
                                     <button onClick={() => props.editData( id, user )}>Edit</button>
                                 </td>

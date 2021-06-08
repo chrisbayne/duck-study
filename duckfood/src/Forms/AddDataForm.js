@@ -2,20 +2,28 @@ import React, { useState } from 'react'
 
 const AddDataForm = ( props ) => {
     
-    // Initialize data
-    const initData = { id: null, name: '', time: '', foodType: '', location: '', numberOfDucks: '', foodAmount: ''}
+    // Initial state of data values are set to empty strings.
+    const initialData = { 
+        id: null, 
+        name: '', 
+        time: '', 
+        foodType: '', 
+        location: '', 
+        numberOfDucks: '', 
+        foodAmount: '' 
+    }
 
-    const [ user, setUser ] = useState( initData )
+    const [ user, setUser ] = useState( initialData )
 
     // Destructing off of the properties of the event.target object.
-    // Dynamically setting object keys based on the input field.
+    // Dynamically setting object keys based on the input fields.
     const handleChange = e => {
-        const { name, value } = e.target
+        const { name, value } = e.target.name
         setUser({ ...user, [ name ]: value })
     }
 
-    // Preventing the default page refresh and checking to see if the users name
-    // and location have been filled in.
+    // Preventing the default page refresh and checking to see if all data
+    // fields have been filled in.
     // Passing the addData function as a callback after the handleChange is finished. 
     const handleSubmit = e => {
         e.preventDefault()
@@ -33,11 +41,11 @@ const AddDataForm = ( props ) => {
             <label>Type of Food</label>
             <input className="u-full-width" type="text" name="foodtype" placeholder="Type of Food" defaultValue={ user.foodType } onChange={ handleChange } />
             <label>Location</label>
-            <input className="u-full-width" type="text" name="location" placeholder="Location" defaultValue={ user.location } onChange={ handleChange } />
+            <input className="u-full-width" type="text" name="location" placeholder="Location (City, Country)" defaultValue={ user.location } onChange={ handleChange } />
             <label>Number of Ducks</label>
             <input className="u-full-width" type="text" name="numberofducks" placeholder="Number of ducks" defaultValue={ user.numberOfDucks } onChange={ handleChange } />
             <label>Food Amount</label>
-            <input className="u-full-width" type="text" name="foodamount" placeholder="Food Amount" defaultValue={ user.foodAmount } onChange={ handleChange } />
+            <input className="u-full-width" type="text" name="foodamount" placeholder="Food Amount (in Lbs)" defaultValue={ user.foodAmount } onChange={ handleChange } />
             <button className="button-warning" type="submit" onClick={ handleSubmit }>Add Data Set</button>
         </form>
     )

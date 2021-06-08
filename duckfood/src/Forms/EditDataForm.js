@@ -6,7 +6,7 @@ const EditDataForm = ( props ) => {
 
     const handleChange = e => {
         const { name, value } = e.target
-        setUser({...user, [name]: value})
+        setUser({...user, [ name ]: value})
     }
 
     // Sending the updated user data sets back to App.js.
@@ -14,9 +14,10 @@ const EditDataForm = ( props ) => {
         e.preventDefault()
         if ( user.name && user.time && user.foodType && user.location && user.numberOfDucks && user.foodAmount ) props.updateData( user )
     }
-
+    // Allows the user to change which data set to edit while editing another.
+    // When the component rerenders, the props are updated.
     useEffect(() => {
-        setUser( props.currentData)
+        setUser( props.currentData )
     }, [props])
 
     return (
