@@ -20,16 +20,16 @@ const UserDataTable =  ( props ) => {
                 {/* Using ternary operator to return data immediately */}
                 { props.users.length > 0 ? (
                     props.users.map(user => {
-                        const { id, name, time, foodType, location, numberOfDucks, foodAmount } = user
+                        const { id, name, time, foodtype, location, numberofducks, foodamount } = user
                         return (
                             <tr>
                                 <td>{ id }</td>
                                 <td>{ name }</td>
                                 <td>{ time }</td>
-                                <td>{ foodType }</td>
+                                <td>{ foodtype }</td>
                                 <td>{ location }</td>
-                                <td>{ numberOfDucks }</td>
-                                <td>{ foodAmount }</td>
+                                <td>{ numberofducks }</td>
+                                <td>{ foodamount }</td>
                                 <td>
                                     {/* Filtering over the submitted data sets array to filter out the data set that has
                                     the ID of the data set to be deleted */}

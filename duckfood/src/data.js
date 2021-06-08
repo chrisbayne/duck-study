@@ -3,28 +3,28 @@ const userDataList = [
         id: 1,
         name: 'John',
         time: '07:00',
-        foodType: 'Poultry Starter Pellets',
+        foodtype: 'Poultry Starter Pellets',
         location: 'Berlin, GER',
-        numberOfDucks: '30',
-        foodAmount: '2 lbs'
+        numberofducks: '30',
+        foodamount: '2 lbs'
     },
     {
         id: 2,
         name: 'Lisa',
         time: '16:00',
-        foodType: 'Wheat/Barley mix',
+        foodtype: 'Wheat/Barley mix',
         location: 'Kyoto, JP',
-        numberOfDucks: '45',
-        foodAmount: '3 lbs'
+        numberofducks: '45',
+        foodamount: '3 lbs'
     },
     {
         id: 3,
         name: 'Kristin',
         time: '13:30',
-        foodType: 'Brown rice',
+        foodtype: 'Brown rice',
         location: 'Victoria, CAN',
-        numberOfDucks: '25',
-        foodAmount: '2.5 lbs'
+        numberofducks: '25',
+        foodamount: '2.5 lbs'
     }
 ]
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const AddDataForm = ( props ) => {
     
@@ -7,10 +7,10 @@ const AddDataForm = ( props ) => {
         id: null, 
         name: '', 
         time: '', 
-        foodType: '', 
+        foodtype: '', 
         location: '', 
-        numberOfDucks: '', 
-        foodAmount: '' 
+        numberofducks: '', 
+        foodamount: '' 
     }
 
     const [ user, setUser ] = useState( initialData )
@@ -30,14 +30,15 @@ const AddDataForm = ( props ) => {
         if ( user.name && user.time && user.location ) {
             handleInputChange( e, props.addData( user ) )
         }
+
         // Pop up alert to present the user with the submitted data set
         alert(`Data Submitted:\n
         Name : ${user.name}
         Time : ${user.time}
-        Type of Food : ${user.foodType}
+        Type of Food : ${user.foodtype}
         Location : ${user.location}
-        Number of Ducks : ${user.numberOfDucks}
-        Amount of Food : ${user.foodAmount}
+        Number of Ducks : ${user.numberofducks}
+        Amount of Food : ${user.foodamount}
         `)
     }
 
@@ -67,7 +68,7 @@ const AddDataForm = ( props ) => {
                 type="text" 
                 name="foodtype" 
                 placeholder="Type of Food" 
-                defaultValue={ user.foodType } 
+                defaultValue={ user.foodtype } 
                 onChange={ handleInputChange } 
             />
             <label>Location</label>
@@ -85,15 +86,16 @@ const AddDataForm = ( props ) => {
                 type="text" 
                 name="numberofducks" 
                 placeholder="Number of ducks" 
-                defaultValue={ user.numberOfDucks } 
+                defaultValue={ user.numberofducks } 
                 onChange={ handleInputChange } 
             />
             <label>Food Amount</label>
             <input 
                 className="u-full-width" 
-                type="text" name="foodamount" 
+                type="text" 
+                name="foodamount" 
                 placeholder="Food Amount (in Lbs)" 
-                defaultValue={ user.foodAmount } 
+                defaultValue={ user.foodamount } 
                 onChange={ handleInputChange } 
             />
             <button 

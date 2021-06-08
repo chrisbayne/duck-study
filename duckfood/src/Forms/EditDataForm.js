@@ -12,7 +12,7 @@ const EditDataForm = ( props ) => {
     // Sending the updated user data sets back to App.js.
     const handleSubmit = e => {
         e.preventDefault()
-        if ( user.name && user.time && user.foodType && user.location && user.numberOfDucks && user.foodAmount ) props.updateData( user )
+        if ( user.name && user.time && user.location ) props.updateData( user )
     }
     // Allows the user to change which data set to edit while editing another.
     // When the component rerenders, the props are updated.
@@ -46,7 +46,7 @@ const EditDataForm = ( props ) => {
                 type="text" 
                 name="foodtype" 
                 placeholder="Type of Food" 
-                defaultValue={ user.foodType } 
+                defaultValue={ user.foodtype } 
                 onChange={ handleInputChange } 
             />
             <label>Location</label>
@@ -64,7 +64,7 @@ const EditDataForm = ( props ) => {
                 type="text" 
                 name="numberofducks" 
                 placeholder="Number of ducks" 
-                defaultValue={ user.numberOfDucks } 
+                defaultValue={ user.numberofducks } 
                 onChange={ handleInputChange } 
             />
             <label>Food Amount</label>
@@ -72,7 +72,7 @@ const EditDataForm = ( props ) => {
                 className="u-full-width" 
                 type="text" name="foodamount" 
                 placeholder="Food Amount (in Lbs)" 
-                defaultValue={ user.foodAmount } 
+                defaultValue={ user.foodamount } 
                 onChange={ handleInputChange } 
             />
             <button 
