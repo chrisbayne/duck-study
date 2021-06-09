@@ -230,24 +230,22 @@ input[type="button"].button-primary:focus {
   /* border-bottom: 1.5px solid; */
 }
 
-.headertitle {
-  margin-left: 1%;
-}
-
 .navcontainer {
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   font-size: 2.5em;
 }
 
 .navlinks {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 0 10 10 100;
   position: relative;
 }
 
 .navlinks a:hover {
-  /* border-bottom: 1px dotted black; */
+  border-bottom: 1px solid black;
 }
 
 .nav-user {
@@ -285,14 +283,14 @@ input[type="button"].button-primary:focus {
 .submit-edit-data-title {
     text-align: inherit;
     color: #636D8E;
-    padding-top: 15vh;
+    padding-top: 10vh;
     font-size: 3em;
 }
 
 .view-data-title {
     text-align: inherit;
     color: #636D8E;
-    padding-top: 15vh;
+    padding-top: 10vh;
     font-size: 3em;
 }
 
@@ -301,6 +299,7 @@ input[type="button"].button-primary:focus {
   height: min-content;
   border-radius: 20px;
   padding: 20px;
+  margin-bottom: 20vh;
   box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
 }
 
@@ -310,6 +309,7 @@ input[type="button"].button-primary:focus {
     height: min-content;
     border-radius: 20px;
     padding: 20px;
+    margin-bottom: 20vh;
     box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
   }
 

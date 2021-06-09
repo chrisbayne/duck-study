@@ -54,15 +54,15 @@ const App = () => {
                 <Navbar.Collapse className="navcontainer" id="basic-navbar-nav">
                     <Nav >
                         <div className="navlinks">
-                            <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Study Locations</NavLink>
-                            <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Monthly Data Sets</NavLink>
-                            <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Submit Data</NavLink>
+                            <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Study Locations |</NavLink>
+                            <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Monthly Data Sets |</NavLink>
+                            <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Submit Data |</NavLink>
                             <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Logout</NavLink>
                            
                         </div>
                     </Nav>
                 </Navbar.Collapse>
-                <NavLink style={{ color: "#baa351" }} className="nav-user" href="#"> Welcome, Scientist !</NavLink>
+                {/* <NavLink style={{ color: "#baa351" }} className="nav-user" href="#"> Welcome, Scientist !</NavLink> */}
             </Navbar>
             <div className="background-banner"></div>
                 <div className="container">
