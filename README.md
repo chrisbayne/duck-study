@@ -19,7 +19,8 @@ The scientist would like to crowdsource this information by creating a web appli
 people can submit these data points. The scientist would like to be able to view all submissions
 (please note that user management/authentication is not a requirement/expectation.)
 
-Below you will find instructions on how to run the application from command line.
+Below you will find instructions on how to run the application from command line as well as my approach to the problem, technologies chosen,
+and the amount of hours I spent working on the project.
 
 ## Learning objectives
 - To design a Single page application using useState functionality to add, view, edit, and delete ficitonal data sets.
