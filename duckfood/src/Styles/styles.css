@@ -170,6 +170,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
+  width: 100%;
   display: inline-block;
   height: 38px;
   padding: 0 30px;
@@ -222,12 +223,38 @@ input[type="button"].button-primary:focus {
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
 
+/* Nav
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.navwrapper {
+  top: 2.5vh;
+  /* border-bottom: 1.5px solid; */
+}
 
-/* Forms
+.headertitle {
+  margin-left: 1%;
+}
+
+.navcontainer {
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: center;
+  padding: 0 10 10 100;
+  position: relative;
+}
+
+.navlinks a:hover {
+  /* border-bottom: 1px dotted black; */
+}
+
+/* Forms / Images / Titles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .background-color {
   background-color: #F2F1E7;
-  height: 100vh;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -235,29 +262,31 @@ input[type="button"].button-primary:focus {
 
 /* .logo {
   background-image: url(../Images/logo.png);
+  height: 20%;
+  width: 20%;
   position: absolute;
   top: 8px;
   left: 16px;
 } */
 
 .background-banner {
-  background-image: url(../Images/duck2.jpg);
-  height: 20vh;
+  background-image: url(../Images/duck1.jpg);
+  height: 30vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
-  top: 10vh;
+  top: 5vh;
 }
 
 .submit-edit-data-title {
-    text-align: center;
+    text-align: inherit;
     color: #636D8E;
     padding-top: 15vh;
 }
 
 .view-data-title {
-    text-align: center;
+    text-align: inherit;
     color: #636D8E;
     padding-top: 15vh;
 }
@@ -380,10 +409,10 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  border-bottom: 4px dotted #E1E1E1; }
 th:first-child,
 td:first-child {
-  padding-left: 0; }
+  padding-left: 10; }
 th:last-child,
 td:last-child {
   padding-right: 0; }

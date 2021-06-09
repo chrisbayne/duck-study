@@ -25,6 +25,15 @@ const userDataList = [
         location: 'Victoria, CAN',
         numberofducks: '22',
         foodamount: '2.5 lbs'
+    },
+    {
+        id: 4,
+        name: 'Chris',
+        time: '09:30',
+        foodtype: 'Grapes',
+        location: 'Halifax, CAN',
+        numberofducks: '7',
+        foodamount: '0.5 lbs'
     }
 ]
 

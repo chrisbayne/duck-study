@@ -4,6 +4,9 @@ import UserDataTable from './Tables/UserDataTable'
 import AddDataForm from './Forms/AddDataForm'
 import EditDataForm from './Forms/EditDataForm'
 import './Styles/styles.css'
+import { Navbar, Nav, NavLink, NavDropdown } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
 
@@ -42,40 +45,54 @@ const App = () => {
   }
 
   return (
-    <div className="background-color">
-        <div className="logo"></div>
-        <div className="background-banner"></div>
-            <div className="container">
-                <div className="row">
-                <div className="five columns">
-                    {/* Shows the EditData or AddData form based on the editing state */}
-                    { editing ? (
-                    <div>
-                        <h2 className="submit-edit-data-title">Edit Data</h2>
-                        <EditDataForm 
-                        currentData={ currentData }
-                        setEditing={ setEditing }
-                        updateData={ updateData } />
+        <div className="background-color">
+            <Navbar className="navwrapper" bg="#F2F1E7" expand="lg">
+                <Navbar.Brand className="headertitle">Waterfowl Nutrition</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse className="navcontainer" id="basic-navbar-nav">
+                    <Nav >
+                        <div className="navlinks">
+                            <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Study Locations</NavLink>
+                            <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Monthly Data Sets</NavLink>
+                            <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Submit Data</NavLink>
+                            <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Logout</NavLink>
+                            <NavLink style={{ color: "#baa351" }} href="#"> Welcome, Scientist !</NavLink>
+                        </div>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+            <div className="logo"></div>
+            <div className="background-banner"></div>
+                <div className="container">
+                    <div className="row">
+                    <div className="five columns">
+                        {/* Shows the EditData or AddData form based on the editing state */}
+                        { editing ? (
+                        <div>
+                            <h1 className="submit-edit-data-title">Edit Data</h1>
+                            <EditDataForm 
+                            currentData={ currentData }
+                            setEditing={ setEditing }
+                            updateData={ updateData } />
+                        </div>
+                        ) : (
+                        <div>
+                            <h1 className="submit-edit-data-title">Submit Data</h1>
+                            <AddDataForm 
+                            addData={ addData } />
+                        </div>
+                    )}
                     </div>
-                    ) : (
-                    <div>
-                        <h2 className="submit-edit-data-title">Submit Data</h2>
-                        <AddDataForm 
-                        addData={ addData } />
+                    <div className="seven columns">
+                        <h1 className="view-data-title">View Data</h1>
+                        <UserDataTable 
+                        users={ users } 
+                        deleteData={ deleteData }
+                        editData={ editData } />
                     </div>
-                )}
-                </div>
-                <div className="seven columns">
-                    <h2 className="view-data-title">View Data</h2>
-                    <UserDataTable 
-                    users={ users } 
-                    deleteData={ deleteData }
-                    editData={ editData } />
-                </div>
-                </div>
-            </div>
-        
-    </div>
+                    </div>
+                </div>      
+        </div>
   )
 }
 
