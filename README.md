@@ -62,9 +62,9 @@ Once those have both been installed successfully and the code is shown in your c
 
 
 ## Approach to the problem
-My approach to the problem was found almost right away. After reading over the assignment once or twice I realized that what I needed to do was to be able to post fictional scientific data from an input form to a table so that the ficitonal scientist in question would be able to crowdsource global information for the study.
+My approach to the problem was found almost right away. After reading over the assignment once or twice I realized that what I needed to do was to be able to post fictional scientific data from an input form to a table so that the fictional scientist in question would be able to crowdsource global information for the study.
 
-A simple input form and display table was the method of choice and the application was built in its simplist and most effective form.
+A simple input form and display table was the method of choice and the application was built in its simplest and most effective form.
 
 I did not include a back end to this application because I felt that it was necessary for me to be able to display a Create, Read, Update, and Delete methodology first and foremost as a deliverable single person sprint to be able to produce and view the data required. 
 
@@ -80,4 +80,4 @@ I chose React because I truly enjoy working within it as a framework, because Fr
 I chose Bootstrap because I've had nothing but good experiences with it and it's very easy to manipulate. Bootstrap is a framework that makes it easy to build responsive web applications, which would be one of the next steps in this application, time pending.
 
 ## Hours spent
-I spent roughly 9 - 10 hours on this project because I felt that I wanted to put my best foot forward. I wanted to build something that I could learn from and something that I liked and found helpful to use. It was important to me that it was visually appealing to another user and I believe I succeeded in all the goals I set for myself.
+I spent roughly 9 - 10 hours on this project because I felt that I wanted to put my best foot forward. I wanted to build something that I could learn from and something that I liked and found helpful to use. It was important to me that it was visually appealing to another user and I believe I succeeded in that.
