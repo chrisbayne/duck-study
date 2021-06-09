@@ -49,8 +49,8 @@ const App = () => {
         <div className="background-color">
             <Navbar className="navwrapper" bg="#F2F1E7" expand="lg">
                 <img src={logo} className="logo" alt="logo" />
-                <NavLink className="nav-user" style={{ color: "#baa351" }}></NavLink>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                {/* <NavLink className="nav-user" style={{ color: "#baa351" }}></NavLink> */}
+                {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                 <Navbar.Collapse className="navcontainer" id="basic-navbar-nav">
                     <Nav >
                         <div className="navlinks">
@@ -58,11 +58,9 @@ const App = () => {
                             <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Monthly Data Sets |</NavLink>
                             <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Submit Data |</NavLink>
                             <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Logout</NavLink>
-                           
                         </div>
                     </Nav>
                 </Navbar.Collapse>
-                {/* <NavLink style={{ color: "#baa351" }} className="nav-user" href="#"> Welcome, Scientist !</NavLink> */}
             </Navbar>
             <div className="background-banner"></div>
                 <div className="container">

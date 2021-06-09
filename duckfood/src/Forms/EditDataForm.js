@@ -78,11 +78,12 @@ const EditDataForm = ( props ) => {
                     onChange={ handleInputChange } 
                 />
                 <button 
-                    className="button-warning" 
+                    className="button-primary" 
                     type="submit" 
                     onClick={ handleSubmit }>Edit Data Set
                 </button>
                 <button 
+                    className="button-primary"
                     type="submit" 
                     onClick={() => props.setEditing( false ) }>Cancel
                 </button>
