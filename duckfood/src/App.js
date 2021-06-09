@@ -3,11 +3,10 @@ import userDataList from './data'
 import UserDataTable from './Tables/UserDataTable'
 import AddDataForm from './Forms/AddDataForm'
 import EditDataForm from './Forms/EditDataForm'
+import { Navbar, Nav, NavLink } from 'react-bootstrap'
 import './Styles/styles.css'
-import { Navbar, Nav, NavLink, NavDropdown } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../src/Images/logo2.png'
-
 
 const App = () => {
 
@@ -32,7 +31,15 @@ const App = () => {
   // Initially set to false so that Adding Data is the primary function.
   const [ editing, setEditing ] = useState( false )
 
-  const initialData = { id: null, name: '', time: '', foodType: '', location: '', numberOfDucks: '', foodAmount: '' }
+  const initialData = { 
+      id: null, 
+      name: '', 
+      time: '', 
+      foodtype: '', 
+      location: '', 
+      numberofducks: '', 
+      foodamount: '' 
+  }
 
   const [ currentData, setCurrentData ] = useState( initialData )
 
@@ -49,8 +56,6 @@ const App = () => {
         <div className="background-color">
             <Navbar className="navwrapper" bg="#F2F1E7" expand="lg">
                 <img src={logo} className="logo" alt="logo" />
-                {/* <NavLink className="nav-user" style={{ color: "#baa351" }}></NavLink> */}
-                {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                 <Navbar.Collapse className="navcontainer" id="basic-navbar-nav">
                     <Nav >
                         <div className="navlinks">
@@ -65,31 +70,31 @@ const App = () => {
             <div className="background-banner"></div>
                 <div className="container">
                     <div className="row">
-                    <div className="five columns">
-                        {/* Shows the EditData or AddData form based on the editing state */}
-                        { editing ? (
-                        <div>
-                            <div className="submit-edit-data-title">Edit Data</div>
-                            <EditDataForm 
-                            currentData={ currentData }
-                            setEditing={ setEditing }
-                            updateData={ updateData } />
+                        <div className="five columns">
+                            {/* Shows the EditData or AddData form based on the editing state */}
+                            { editing ? (
+                            <div>
+                                <div className="submit-edit-data-title">Edit Data</div>
+                                <EditDataForm 
+                                currentData={ currentData }
+                                setEditing={ setEditing }
+                                updateData={ updateData } />
+                            </div>
+                            ) : (
+                            <div>
+                                <div className="submit-edit-data-title">Submit Data</div>
+                                <AddDataForm 
+                                addData={ addData } />
+                            </div>
+                        )}
                         </div>
-                        ) : (
-                        <div>
-                            <div className="submit-edit-data-title">Submit Data</div>
-                            <AddDataForm 
-                            addData={ addData } />
+                        <div className="seven columns">
+                            <div className="view-data-title">View Data</div>
+                            <UserDataTable 
+                            users={ users } 
+                            deleteData={ deleteData }
+                            editData={ editData } />
                         </div>
-                    )}
-                    </div>
-                    <div className="seven columns">
-                        <div className="view-data-title">View Data</div>
-                        <UserDataTable 
-                        users={ users } 
-                        deleteData={ deleteData }
-                        editData={ editData } />
-                    </div>
                     </div>
                 </div>      
         </div>
