@@ -6,6 +6,7 @@ import EditDataForm from './Forms/EditDataForm'
 import './Styles/styles.css'
 import { Navbar, Nav, NavLink, NavDropdown } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from '../src/Images/logo2.png'
 
 
 const App = () => {
@@ -47,7 +48,8 @@ const App = () => {
   return (
         <div className="background-color">
             <Navbar className="navwrapper" bg="#F2F1E7" expand="lg">
-                <NavLink className="nav-user" style={{ color: "#baa351" }}>Waterfowl Nutrition: A Global Study</NavLink>
+                <img src={logo} className="logo" alt="logo" />
+                <NavLink className="nav-user" style={{ color: "#baa351" }}></NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="navcontainer" id="basic-navbar-nav">
                     <Nav >
@@ -62,7 +64,6 @@ const App = () => {
                 </Navbar.Collapse>
                 <NavLink style={{ color: "#baa351" }} className="nav-user" href="#"> Welcome, Scientist !</NavLink>
             </Navbar>
-            <div className="logo"></div>
             <div className="background-banner"></div>
                 <div className="container">
                     <div className="row">
