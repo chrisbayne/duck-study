@@ -23,7 +23,7 @@ Below you will find instructions on how to run the application from command line
 and the amount of hours I spent working on the project.
 
 ## Learning objectives
-- To design a Single page application using useState functionality to add, view, edit, and delete ficitonal data sets.
+- To design a Single page application to add, view, edit, and delete ficitonal data sets.
 
 ## Milestones
 ### Milestone 1
