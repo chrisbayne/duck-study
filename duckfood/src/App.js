@@ -47,7 +47,7 @@ const App = () => {
   return (
         <div className="background-color">
             <Navbar className="navwrapper" bg="#F2F1E7" expand="lg">
-                <Navbar.Brand className="headertitle">Waterfowl Nutrition</Navbar.Brand>
+                <NavLink className="nav-user" style={{ color: "#baa351" }}>Waterfowl Nutrition: A Global Study</NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="navcontainer" id="basic-navbar-nav">
                     <Nav >
@@ -56,10 +56,11 @@ const App = () => {
                             <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Monthly Data Sets</NavLink>
                             <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Submit Data</NavLink>
                             <NavLink className="navlinks" style={{ color: "#e9756d" }} href="#">Logout</NavLink>
-                            <NavLink style={{ color: "#baa351" }} href="#"> Welcome, Scientist !</NavLink>
+                           
                         </div>
                     </Nav>
                 </Navbar.Collapse>
+                <NavLink style={{ color: "#baa351" }} className="nav-user" href="#"> Welcome, Scientist !</NavLink>
             </Navbar>
             <div className="logo"></div>
             <div className="background-banner"></div>
@@ -69,7 +70,7 @@ const App = () => {
                         {/* Shows the EditData or AddData form based on the editing state */}
                         { editing ? (
                         <div>
-                            <h1 className="submit-edit-data-title">Edit Data</h1>
+                            <div className="submit-edit-data-title">Edit Data</div>
                             <EditDataForm 
                             currentData={ currentData }
                             setEditing={ setEditing }
@@ -77,14 +78,14 @@ const App = () => {
                         </div>
                         ) : (
                         <div>
-                            <h1 className="submit-edit-data-title">Submit Data</h1>
+                            <div className="submit-edit-data-title">Submit Data</div>
                             <AddDataForm 
                             addData={ addData } />
                         </div>
                     )}
                     </div>
                     <div className="seven columns">
-                        <h1 className="view-data-title">View Data</h1>
+                        <div className="view-data-title">View Data</div>
                         <UserDataTable 
                         users={ users } 
                         deleteData={ deleteData }

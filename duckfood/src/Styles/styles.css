@@ -250,6 +250,10 @@ input[type="button"].button-primary:focus {
   /* border-bottom: 1px dotted black; */
 }
 
+.nav-user {
+  font-size: 1.5em;
+}
+
 /* Forms / Images / Titles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .background-color {
@@ -260,14 +264,14 @@ input[type="button"].button-primary:focus {
   background-size: cover;
 }
 
-/* .logo {
-  background-image: url(../Images/logo.png);
-  height: 20%;
-  width: 20%;
-  position: absolute;
-  top: 8px;
-  left: 16px;
-} */
+.logo {
+  /* background-image: url(../Images/logo.png); */
+  /* height: 40%; */
+  /* width: 40%; */
+  /* position: absolute; */
+  /* top: 8px; */
+  /* left: 16px; */
+}
 
 .background-banner {
   background-image: url(../Images/duck1.jpg);
@@ -283,12 +287,14 @@ input[type="button"].button-primary:focus {
     text-align: inherit;
     color: #636D8E;
     padding-top: 15vh;
+    font-size: 3em;
 }
 
 .view-data-title {
     text-align: inherit;
     color: #636D8E;
     padding-top: 15vh;
+    font-size: 3em;
 }
 
 .main-container {
@@ -307,6 +313,8 @@ input[type="button"].button-primary:focus {
     padding: 20px;
     box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
   }
+
+  /* –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 input[type="email"],
 input[type="number"],
